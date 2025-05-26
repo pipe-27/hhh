@@ -5,11 +5,12 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from typing import List, Optional
 
-from PatientCrud import (
+from app.controlador.PatientCrud import (
     GetPatientById, WritePatient, GetPatientByIdentifier,
     WriteServiceRequest, read_service_request, write_appointment,
     read_appointment, write_clinical_procedure
 )
+
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
